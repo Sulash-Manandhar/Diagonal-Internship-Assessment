@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 export const Register = () => {
+  let navigate = useNavigate();
   const [errors, setErrors] = useState([]);
 
   const handleRegister = (e) => {
@@ -17,7 +18,10 @@ export const Register = () => {
       })
       .then((res) => {
         console.log(res.data);
-        window.alert("You can login now");
+        window.alert(
+          "You have been registered. You can now login with that information.(Clicking ok will redirect you to login page.)"
+        );
+        navigate("/user-login");
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -82,6 +86,7 @@ export const Register = () => {
               className="form-control"
               id="email-address"
               placeholder="example@example.com"
+              autoComplete="off"
             />
           </div>
           <div className="mb-3">
@@ -93,11 +98,12 @@ export const Register = () => {
               className="form-control"
               id="password1"
               placeholder="********"
+              autoComplete="off"
             />
           </div>
           <div className="mb-3">
             <label htmlFor="password" className="form-label">
-              Password
+              Re-Password
             </label>
             <input
               type="password"

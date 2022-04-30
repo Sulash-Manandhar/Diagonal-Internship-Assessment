@@ -25,6 +25,7 @@ form.addEventListener("submit", (event) => {
   form.reset();
 });
 
+//formulate Payment
 const formulatePayment = (choice, amount) => {
   //console.log
   console.log(`User choosed ${choice} installment method for amount ${amount}`);

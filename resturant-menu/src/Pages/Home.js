@@ -35,7 +35,10 @@ export const Home = () => {
           {/*Load Component according to 'handlePageChange' function */}
           {page === "MenuList" ? <MenuList /> : null}
           {page === "OrderHistory" ? (
-            <OrderHistory userId={userData.id} />
+            <OrderHistory
+              userId={userData.id}
+              handlePageChange={handlePageChange}
+            />
           ) : null}
         </div>
       </div>

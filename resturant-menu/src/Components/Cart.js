@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export const Cart = ({ userId }) => {
-  console.log(userId);
   //defining useState
   const [cartItem, setCartItem] = useState([]);
   let temp = cartItem;

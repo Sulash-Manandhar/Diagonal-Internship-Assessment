@@ -1,9 +1,9 @@
 console.log("Running");
 
-let n = 4; //the flooe of the elevator
-let m = 5; //the floor of the elevator
+let n = 7; //the flooe of the elevator
+let m = 6; //the floor of the elevator
 
-let speed = [1, 2, 3, 10];
+let speed = [3, 1, 1, 4];
 //speed[0] = The seconds required when the elevator rises of falls 1 floor
 //speed[1] = The seconds required when the elevator open the door
 //speed[2] = The seconds required when the elevator close the door
@@ -58,7 +58,7 @@ const optimalDuration = (m, n, speed) => {
   }
   const { walkDuration, semiElevatorDuration, elevatorDuration } =
     calculateAllDuration(m, n, speed);
-
+  console.log(walkDuration, semiElevatorDuration, elevatorDuration);
   if (
     walkDuration <= semiElevatorDuration &&
     walkDuration <= elevatorDuration
@@ -82,7 +82,7 @@ const optimalDuration = (m, n, speed) => {
     elevatorDuration <= semiElevatorDuration
   ) {
     return {
-      duration: semiElevatorDuration,
+      duration: elevatorDuration,
       msg: `Jhon should take elevator all the way`,
     };
   }
