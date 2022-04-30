@@ -1,0 +1,73 @@
+/*  Color combinations
+ ## - white
+ ##2F323A - black
+ #FFC107 - yellow
+ #DC3545 - red
+ #198754-green */
+
+.pointer {
+    cursor: pointer;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.white-color {
+    color: white;
+}
+
+.black-color {
+    color: #2f323a;
+}
+
+.bg-grey {
+    background-color: #2f323a !important;
+    color: #fff;
+}
+
+.active-link {
+    background-color: #2f323a;
+    color: white !important;
+}
+
+.bg-white {
+    background-color: #e0d3de;
+}
+
+.bg-white .login-container {
+    width: 50%;
+    min-height: 30%;
+}
+
+.navbar-brand .nav-link {
+    text-decoration: none !important;
+    color: white;
+}
+
+.cart-container {
+    color: #2f323a;
+    background-color: #e0d3de;
+}
+
+.btn-background-black {
+    background-color: #2f323a;
+    color: #ffffff;
+    width: 350px;
+}
+
+.btn-background-black:hover {
+    background-color: #3a3d45;
+    color: #ffffff;
+}
+
+.badge-bg {
+    background-color: white;
+    color: #2f323a;
+    border: 1px solid black;
+}
